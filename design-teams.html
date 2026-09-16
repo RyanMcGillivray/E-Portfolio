@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Teams | Ryan McGillivray</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Ryan McGillivray</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="design-teams.html" aria-current="page">Design Teams</a></li>
+                <li><a href="career.html">Career</a></li>
+                <li><a href="index.html#about">About Me</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="portfolio-section dark-section">
+            <div class="section-container">
+                <a href="index.html" class="back-home-button">← Back to Home</a>
+                <div class="section-heading">
+                    <p class="eyebrow">DESIGN TEAMS</p>
+                    <h2>Hands-On Engineering</h2>
+                    <p>Experience applying engineering theory to real multidisciplinary design challenges.</p>
+                </div>
+
+                <div class="team-grid">
+                    <article class="large-card">
+                        <img src="images/FSAE2.png" alt="Formula SAE race car">
+                        <div class="large-card-content">
+                            <h3>Formula SAE Car</h3>
+                            <p>Focused on designing and manufacturing carbon-fiber aerodynamic components in CATIA for the Formula SAE car to improve performance and handling.</p>
+                            <div class="team-gallery">
+                                <input class="expand-toggle team-toggle" id="fsae-toggle" type="checkbox">
+                                <div class="expandable-content team-gallery-content team-gallery-preview">
+                                    <ul>
+                                        <li>Designed carbon-fiber aerodynamic components in CATIA.</li>
+                                        <li>Manufactured carbon-fiber aerodynamic components, including layups.</li>
+                                        <li>Improved vehicle performance and handling through aerodynamic development.</li>
+                                    </ul>
+                                    <div class="team-gallery-images">
+                                        <img src="images/CarbonFiber.jpg" alt="Carbon fiber manufacturing">
+                                        <img src="images/Front Wing.jpg" alt="Formula SAE front wing">
+                                        <img src="images/FSAE.png" alt="Queen's Formula SAE race car">
+                                    </div>
+                                </div>
+                                <label class="expand-toggle-label" for="fsae-toggle">
+                                    <span class="expand-label">Read More <span aria-hidden="true">↓</span></span>
+                                    <span class="collapse-label">Show less <span aria-hidden="true">↑</span></span>
+                                </label>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="large-card">
+                        <img src="images/QADTBanner2.png" alt="Queen's Aerospace Design Team fixed-wing drone at a test field">
+                        <div class="large-card-content">
+                            <h3>Queen's Aerospace Design Team</h3>
+                            <p>Developing and optimizing a fixed-wing drone to identify forest fire hotspots by using CFD analysis and Queen's Aerospace Design Team software and code to refine wing and fuselage shapes and meet performance requirements.</p>
+                            <div class="team-gallery">
+                                <input class="expand-toggle team-toggle" id="qadt-toggle" type="checkbox">
+                                <div class="expandable-content team-gallery-content team-gallery-preview">
+                                    <ul>
+                                        <li>Developing and optimizing a fixed-wing drone for identifying forest fire hotspots.</li>
+                                        <li>Leveraged CFD analysis and Queen's Aerospace Design Team software and code to refine wing and fuselage shapes.</li>
+                                        <li>Ensured the design met target performance requirements.</li>
+                                        <li>Collaborated with structural, propulsion, and electrical sub-teams on internal structure design, propeller sizing, and motor selection.</li>
+                                    </ul>
+                                    <div class="team-gallery-images">
+                                        <img src="images/QADT Layout.jpg" alt="Queen's Aerospace Design Team layout">
+                                        <img src="images/QADT Opt.jpg" alt="Aerospace structural optimization">
+                                        <img src="images/QADT Drone.jpg" alt="Queen's Aerospace Design Team drone">
+                                        <img src="images/QADTBanner.jpg" alt="Queen's Aerospace Design Team aircraft at a test field">
+                                    </div>
+                                </div>
+                                <label class="expand-toggle-label" for="qadt-toggle">
+                                    <span class="expand-label">Read More <span aria-hidden="true">↓</span></span>
+                                    <span class="collapse-label">Show less <span aria-hidden="true">↑</span></span>
+                                </label>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="section-container">
+            <p>© 2026 Ryan McGillivray</p>
+            <p>Mechanical Engineering — Queen's University</p>
+        </div>
+    </footer>
+
+    <div id="image-lightbox" class="image-lightbox" role="dialog" aria-modal="true" aria-label="Expanded image" aria-hidden="true">
+        <button class="image-lightbox-close" type="button" aria-label="Close expanded image">×</button>
+        <img class="image-lightbox-image" src="" alt="">
+        <p class="image-lightbox-caption"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

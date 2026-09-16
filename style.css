@@ -227,7 +227,7 @@ ul {
 ========================================================= */
 
 .hero {
-    min-height: calc(100vh - 75px);
+    min-height: calc(85vh - 75px);
 
     background:
         linear-gradient(
@@ -487,7 +487,7 @@ ul {
 .intro {
     background-color: var(--white);
 
-    padding: 110px 0;
+    padding: 65px 0;
 }
 
 
@@ -530,6 +530,59 @@ ul {
 }
 
 
+.homepage-detail {
+    display: none;
+}
+
+
+.back-home-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    min-height: 44px;
+
+    margin-bottom: 34px;
+
+    padding: 10px 18px;
+
+    border: 1px solid var(--blue);
+
+    border-radius: 6px;
+
+    color: var(--blue);
+
+    font-size: 0.9rem;
+
+    font-weight: 700;
+
+    transition: var(--transition);
+}
+
+
+.back-home-button:hover {
+    background-color: var(--blue);
+
+    color: var(--white);
+}
+
+
+.dark-section .back-home-button {
+    border-color: rgba(255, 255, 255, 0.35);
+
+    color: var(--white);
+}
+
+
+.dark-section .back-home-button:hover {
+    border-color: var(--cyan);
+
+    background-color: var(--cyan);
+
+    color: var(--navy);
+}
+
+
 .section-heading {
     max-width: 750px;
 
@@ -563,6 +616,8 @@ ul {
 
 .featured-work {
     background-color: var(--off-white);
+
+    padding: 65px 0;
 }
 
 
@@ -715,7 +770,7 @@ ul {
 
 
 .project-card > img {
-    height: 230px;
+    height: 280px;
 
     object-fit: cover;
 
@@ -865,7 +920,7 @@ ul {
 /* Design team galleries */
 
 .team-gallery {
-    margin-top: 28px;
+    margin: 28px -35px -35px;
 
     border-top: 1px solid rgba(255, 255, 255, 0.16);
 
@@ -874,12 +929,43 @@ ul {
 
 
 .team-gallery-preview {
-    max-height: 300px;
+    max-height: 190px;
+
+    padding: 0 35px;
 }
 
 
-.team-gallery-preview::after {
+.team-gallery .team-gallery-preview::after {
     height: 110px;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(19, 36, 61, 0),
+        rgba(19, 36, 61, 0.2) 35%,
+        rgba(19, 36, 61, 0.72) 72%,
+        rgba(19, 36, 61, 0.98)
+    );
+}
+
+
+.team-gallery-content {
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+
+    align-items: start;
+
+    gap: 28px;
+}
+
+
+.team-gallery-content ul {
+    margin: 0;
+}
+
+
+.team-gallery .expand-toggle-label {
+    margin: 16px 35px 30px;
 }
 
 
@@ -888,9 +974,9 @@ ul {
 
     grid-template-columns: repeat(2, 1fr);
 
-    gap: 14px;
+    gap: 24px;
 
-    margin-top: 18px;
+    margin-top: 0;
 }
 
 
@@ -902,24 +988,13 @@ ul {
 .team-gallery-images img {
     width: 100%;
 
-    height: 210px;
-
-    object-fit: contain;
-
-    background-color: rgba(0, 0, 0, 0.2);
+    height: auto;
 
     border-radius: 8px;
 
-    opacity: 0.88;
+    opacity: 1;
 
     transition: var(--transition);
-}
-
-
-.team-gallery-images img[src="images/QADT Layout.jpg"] {
-    background-color: #f2f2f2;
-
-    opacity: 1;
 }
 
 
@@ -1021,6 +1096,86 @@ ul {
 
 .career-content li {
     margin-bottom: 8px;
+}
+
+
+/* Additional project media */
+
+.project-more,
+.career-more {
+    margin-top: 20px;
+
+    padding-top: 16px;
+
+    border-top: 1px solid var(--light-gray);
+}
+
+
+.project-more summary,
+.career-more summary {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    list-style: none;
+
+    color: var(--blue);
+
+    font-size: 0.9rem;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+.project-more summary::-webkit-details-marker,
+.career-more summary::-webkit-details-marker {
+    display: none;
+}
+
+
+.project-more summary::after,
+.career-more summary::after {
+    content: "↓";
+
+    font-size: 1.1rem;
+}
+
+
+.project-more[open] summary::after,
+.career-more[open] summary::after {
+    content: "↑";
+}
+
+
+.project-more-image,
+.career-more-image {
+    margin-top: 16px;
+}
+
+
+.project-more-image img,
+.career-more-image img {
+    width: 100%;
+
+    object-fit: contain;
+
+    background-color: var(--off-white);
+
+    border-radius: 6px;
+}
+
+
+.project-more-image img {
+    height: 180px;
+}
+
+
+.career-more-image img {
+    height: 230px;
 }
 
 
@@ -1724,6 +1879,122 @@ footer p:last-child {
 
 
 /* =========================================================
+   IMAGE VIEWER
+========================================================= */
+
+.image-expandable {
+    cursor: zoom-in;
+}
+
+
+.image-lightbox {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 2000;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 14px;
+
+    padding: 60px 32px 32px;
+
+    background-color: rgba(11, 23, 42, 0.94);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+
+.image-lightbox.is-open {
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+}
+
+
+.image-lightbox-image {
+    width: auto;
+
+    max-width: 100%;
+
+    max-height: calc(100vh - 130px);
+
+    object-fit: contain;
+
+    border-radius: 8px;
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+
+.image-lightbox-caption {
+    color: rgba(255, 255, 255, 0.8);
+
+    font-size: 0.9rem;
+
+    text-align: center;
+}
+
+
+.image-lightbox-close {
+    position: absolute;
+
+    top: 18px;
+    right: 22px;
+
+    width: 44px;
+
+    height: 44px;
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+
+    border-radius: 50%;
+
+    background-color: rgba(255, 255, 255, 0.08);
+
+    color: var(--white);
+
+    font-size: 2rem;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition: var(--transition);
+}
+
+
+.image-lightbox-close:hover,
+.image-lightbox-close:focus-visible {
+    border-color: var(--cyan);
+
+    background-color: var(--cyan);
+
+    color: var(--navy);
+}
+
+
+.lightbox-open {
+    overflow: hidden;
+}
+
+
+/* =========================================================
    20. ANIMATIONS
 ========================================================= */
 
@@ -1952,13 +2223,37 @@ footer p:last-child {
     }
 
 
-    .team-gallery-images {
-        grid-template-columns: 1fr;
+    .team-gallery {
+        margin: 28px -28px -28px;
     }
 
 
-    .team-gallery-images img {
-        height: 250px;
+    .team-gallery-preview {
+        max-height: 260px;
+
+        padding: 0 28px;
+    }
+
+
+    .team-gallery-content {
+        grid-template-columns: 1fr;
+
+        gap: 0;
+    }
+
+
+    .team-gallery-images {
+        margin-top: 18px;
+    }
+
+
+    .team-gallery .expand-toggle-label {
+        margin: 16px 28px 26px;
+    }
+
+
+    .team-gallery-images {
+        grid-template-columns: 1fr;
     }
 
 
@@ -2083,6 +2378,16 @@ footer p:last-child {
         font-size: 3rem;
 
         letter-spacing: -1px;
+    }
+
+
+    .image-lightbox {
+        padding: 64px 18px 24px;
+    }
+
+
+    .image-lightbox-image {
+        max-height: calc(100vh - 120px);
     }
 
 }
