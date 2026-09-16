@@ -4,161 +4,1415 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Your Name | E-Portfolio</title>
+    <title>Ryan McGillivray | E-Portfolio</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Navigation -->
-    <nav>
-        <h2>Your Name</h2>
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+    <nav class="navbar">
 
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#design">Design</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#goals">Career Goals</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+        <div class="nav-container">
+
+            <a href="#home" class="logo">
+                Ryan McGillivray
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#design-teams">Design Teams</a></li>
+                <li><a href="#career">Career</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+        </div>
+
     </nav>
 
 
-    <!-- Home -->
-    <section id="home">
-        <h1>Hi, I'm Your Name</h1>
+    <!-- =========================
+         HERO / HOME
+    ========================== -->
+    <header id="home" class="hero">
 
-        <p>
-            Welcome to my e-portfolio. I'm a student interested in
-            design, technology, and developing my professional skills.
-        </p>
+        <div class="hero-content">
 
-        <a href="#contact">Get in Touch</a>
+            <div class="hero-text">
+
+                <p class="eyebrow">
+                    ENGINEERING • DESIGN • AEROSPACE
+                </p>
+
+                <h1>
+                    Ryan McGillivray
+                </h1>
+
+                <h2>
+                    Mechanical Engineering Student |
+                    Aerospace &amp; Design
+                </h2>
+
+                <p class="hero-description">
+                    Mechanical Engineering — Queen's University<br>
+                    Class of 2026
+                </p>
+
+                <p class="hero-introduction">
+                    Welcome to my engineering portfolio. This site highlights
+                    my academic projects, hands-on design team experience,
+                    and professional engineering experience in the aerospace
+                    industry.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#projects" class="button primary-button">
+                        Explore My Work
+                    </a>
+
+                    <a href="#contact" class="button secondary-button">
+                        Contact Me
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-image">
+
+                <img
+                    src="images/Profile.jpg"
+                    alt="Portrait of Ryan McGillivray"
+                >
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         INTRODUCTION
+    ========================== -->
+    <section class="intro">
+
+        <div class="section-container">
+
+            <p class="eyebrow">
+                ENGINEERING PORTFOLIO
+            </p>
+
+            <h2>
+                Designing solutions through engineering,
+                collaboration, and hands-on experience.
+            </h2>
+
+            <p>
+                My engineering experience spans academic design projects,
+                multidisciplinary engineering teams, and professional
+                aerospace engineering roles. I enjoy working at the
+                intersection of mechanical design, aerospace systems,
+                analysis, and practical manufacturing.
+            </p>
+
+        </div>
+
     </section>
 
 
-    <!-- Work Experience -->
-    <section id="experience">
-        <h2>Work Experience</h2>
+    <!-- =========================
+         FEATURED WORK
+    ========================== -->
+    <section class="featured-work">
 
-        <h3>Job Title — Company Name</h3>
-        <p>2024 – Present</p>
+        <div class="section-container">
 
-        <p>
-            Describe your role, responsibilities, accomplishments,
-            and what you learned from this experience.
-        </p>
+            <div class="section-heading">
+
+                <p class="eyebrow">
+                    FEATURED WORK
+                </p>
+
+                <h2>
+                    Explore My Experience
+                </h2>
+
+                <p>
+                    A selection of projects, design teams, and professional
+                    engineering experiences from my time at Queen's University
+                    and in industry.
+                </p>
+
+            </div>
+
+
+            <!-- =========================
+                 PROJECTS CARD
+            ========================== -->
+
+            <a href="#projects" class="feature-card">
+
+                <div class="feature-image">
+
+                    <img
+                        src="images/RoboticArm.jpg"
+                        alt="Robotic arm engineering project"
+                    >
+
+                </div>
+
+                <div class="feature-content">
+
+                    <p class="card-number">
+                        01
+                    </p>
+
+                    <h3>
+                        Engineering Projects
+                    </h3>
+
+                    <p>
+                        Engineering design projects ranging from robotic
+                        systems and spacecraft concepts to mechanical
+                        design challenges and hackathons.
+                    </p>
+
+                    <span class="card-link">
+                        Explore Projects →
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <!-- =========================
+                 DESIGN TEAMS CARD
+            ========================== -->
+
+            <a href="#design-teams" class="feature-card reverse-card">
+
+                <div class="feature-image">
+
+                    <img
+                        src="images/QADT Drone.jpg"
+                        alt="Queen's Aerospace Design Team fixed-wing drone"
+                    >
+
+                </div>
+
+                <div class="feature-content">
+
+                    <p class="card-number">
+                        02
+                    </p>
+
+                    <h3>
+                        Design Teams
+                    </h3>
+
+                    <p>
+                        Hands-on multidisciplinary engineering experience
+                        through Formula SAE and the Queen's Aerospace
+                        Design Team.
+                    </p>
+
+                    <span class="card-link">
+                        Explore Design Teams →
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <!-- =========================
+                 CAREER CARD
+            ========================== -->
+
+            <a href="#career" class="feature-card">
+
+                <div class="feature-image">
+
+                    <img
+                        src="images/Hybrid Engine.jpg"
+                        alt="Hybrid electric propulsion engineering project"
+                    >
+
+                </div>
+
+                <div class="feature-content">
+
+                    <p class="card-number">
+                        03
+                    </p>
+
+                    <h3>
+                        Career Experience
+                    </h3>
+
+                    <p>
+                        Professional aerospace engineering experience
+                        involving propulsion, aircraft systems, design,
+                        analysis, and legacy aircraft programs.
+                    </p>
+
+                    <span class="card-link">
+                        Explore Career →
+                    </span>
+
+                </div>
+
+            </a>
+
+        </div>
+
     </section>
 
 
-    <!-- Design Experience -->
-    <section id="design">
-        <h2>Design Experience</h2>
+    <!-- =========================
+         PROJECTS
+    ========================== -->
+    <section id="projects" class="portfolio-section">
 
-        <p>
-            Describe your design experience, projects, courses,
-            or other relevant work.
-        </p>
+        <div class="section-container">
 
-        <h3>Project Name</h3>
-        <p>
-            Describe the project, your role, the design process,
-            and the final result.
-        </p>
+            <div class="section-heading">
+
+                <p class="eyebrow">
+                    01 — PROJECTS
+                </p>
+
+                <h2>
+                    Engineering Design Projects
+                </h2>
+
+                <p>
+                    Academic and extracurricular projects that have allowed
+                    me to apply engineering principles to real design
+                    challenges.
+                </p>
+
+            </div>
+
+
+            <div class="project-grid">
+
+
+                <!-- ROBOTIC ARM -->
+
+                <article class="project-card">
+
+                    <img
+                        src="images/RoboticArm.jpg"
+                        alt="Robotic arm project"
+                    >
+
+                    <div class="project-content">
+
+                        <p class="project-category">
+                            APSC 101
+                        </p>
+
+                        <h3>
+                            Robotic Arm
+                        </h3>
+
+                        <p>
+                            Engineering Design &amp; Practice project
+                            focused on the design and development of a
+                            robotic arm.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ROBOT ARM TEAM -->
+
+                <article class="project-card">
+
+                    <img
+                        src="images/RobotArmTeam.jpg"
+                        alt="Robotic arm engineering team"
+                    >
+
+                    <div class="project-content">
+
+                        <p class="project-category">
+                            APSC 101
+                        </p>
+
+                        <h3>
+                            Robotic Arm Design Team
+                        </h3>
+
+                        <p>
+                            Collaborative engineering design and development
+                            as part of the APSC 101 design project.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- CUBESAT -->
+
+                <article class="project-card">
+
+                    <img
+                        src="images/HoneyComb1.png"
+                        alt="CubeSat engineering project"
+                    >
+
+                    <div class="project-content">
+
+                        <p class="project-category">
+                            APSC 103
+                        </p>
+
+                        <h3>
+                            CubeSat
+                        </h3>
+
+                        <p>
+                            Engineering Client-Based Design Project
+                            focused on the development of a CubeSat concept.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- HONEYCOMB DESIGN -->
+
+                <article class="project-card">
+
+                    <img
+                        src="images/HoneyComb2.jpg"
+                        alt="Engineering honeycomb design"
+                    >
+
+                    <div class="project-content">
+
+                        <p class="project-category">
+                            APSC 103
+                        </p>
+
+                        <h3>
+                            CubeSat Design Development
+                        </h3>
+
+                        <p>
+                            Further design development and engineering
+                            considerations for the CubeSat project.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ASTEROID MINING -->
+
+                <article class="project-card">
+
+                    <img
+                        src="images/HoneyComb3.png"
+                        alt="Asteroid mining engineering concept"
+                    >
+
+                    <div class="project-content">
+
+                        <p class="project-category">
+                            APSC 200
+                        </p>
+
+                        <h3>
+                            Asteroid Mining
+                        </h3>
+
+                        <p>
+                            Engineering Design &amp; Practice project
+                            exploring concepts for asteroid resource
+                            extraction.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- VOLLEYBALL KNEE PAD -->
+
+                <article class="project-card">
+
+                    <img
+                        src="images/HoneyComb4.png"
+                        alt="Mechanical design project"
+                    >
+
+                    <div class="project-content">
+
+                        <p class="project-category">
+                            APSC 200
+                        </p>
+
+                        <h3>
+                            Volleyball Knee Pad
+                        </h3>
+
+                        <p>
+                            Mechanical design project focused on developing
+                            a solution for volleyball athletes.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- HACKATHON -->
+
+                <article class="project-card">
+
+                    <img
+                        src="images/Hackathon.jpg"
+                        alt="Queen's Next Generation Hackathon"
+                    >
+
+                    <div class="project-content">
+
+                        <p class="project-category">
+                            Queen's Next Generation Hackathon
+                        </p>
+
+                        <h3>
+                            Hackathon
+                        </h3>
+
+                        <p>
+                            A collaborative engineering and technology
+                            challenge involving rapid design, problem
+                            solving, and prototyping.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
     </section>
 
 
-    <!-- Skills -->
-    <section id="skills">
-        <h2>Skills</h2>
+    <!-- =========================
+         DESIGN TEAMS
+    ========================== -->
+    <section id="design-teams" class="portfolio-section dark-section">
 
-        <h3>Professional Skills</h3>
-        <ul>
-            <li>Communication</li>
-            <li>Teamwork</li>
-            <li>Problem Solving</li>
-            <li>Time Management</li>
-        </ul>
+        <div class="section-container">
 
-        <h3>Technical Skills</h3>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>Microsoft Office</li>
-            <li>CAD / Design Software</li>
-        </ul>
+            <div class="section-heading">
+
+                <p class="eyebrow">
+                    02 — DESIGN TEAMS
+                </p>
+
+                <h2>
+                    Hands-On Engineering
+                </h2>
+
+                <p>
+                    Experience applying engineering theory to real
+                    multidisciplinary design challenges.
+                </p>
+
+            </div>
+
+
+            <div class="team-grid">
+
+
+                <!-- FORMULA SAE -->
+
+                <article class="large-card">
+
+                    <img
+                        src="images/Front Wing.jpg"
+                        alt="Formula SAE front wing"
+                    >
+
+                    <div class="large-card-content">
+
+                        <p class="project-category">
+                            FORMULA SAE
+                        </p>
+
+                        <h3>
+                            Formula SAE Car
+                        </h3>
+
+                        <p>
+                            Contributed to the aerodynamic development of a
+                            Formula SAE vehicle, including wing design and
+                            composite manufacturing.
+                        </p>
+
+                        <ul>
+                            <li>
+                                Designed components of the vehicle's
+                                aerodynamic wings.
+                            </li>
+
+                            <li>
+                                Performed carbon fiber layups.
+                            </li>
+
+                            <li>
+                                Gained hands-on experience with composite
+                                manufacturing.
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </article>
+
+
+                <!-- QUEEN'S AEROSPACE DESIGN TEAM -->
+
+                <article class="large-card">
+
+                    <img
+                        src="images/QADT Drone.jpg"
+                        alt="Queen's Aerospace Design Team fixed-wing drone"
+                    >
+
+                    <div class="large-card-content">
+
+                        <p class="project-category">
+                            QUEEN'S AEROSPACE DESIGN TEAM
+                        </p>
+
+                        <h3>
+                            Aerospace Design &amp; Optimization
+                        </h3>
+
+                        <p>
+                            Worked on aerospace design, CAD, computational
+                            analysis, and the development of a fixed-wing
+                            drone for forest fire hotspot identification.
+                        </p>
+
+                        <ul>
+                            <li>
+                                Helped create an aerostructure optimizer.
+                            </li>
+
+                            <li>
+                                Developed CAD models for CFD analysis.
+                            </li>
+
+                            <li>
+                                Helped develop a fixed-wing drone.
+                            </li>
+
+                            <li>
+                                Worked toward applications for identifying
+                                forest fire hotspots.
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+            <!-- SUPPORTING DESIGN TEAM IMAGES -->
+
+            <div class="image-gallery">
+
+                <img
+                    src="images/CarbonFiber.jpg"
+                    alt="Carbon fiber manufacturing"
+                >
+
+                <img
+                    src="images/QADT Layout.jpg"
+                    alt="Queen's Aerospace Design Team layout"
+                >
+
+                <img
+                    src="images/QADT Opt.jpg"
+                    alt="Aerospace structural optimization"
+                >
+
+            </div>
+
+        </div>
+
     </section>
 
 
-    <!-- About Me -->
-    <section id="about">
-        <h2>About Me</h2>
+    <!-- =========================
+         CAREER
+    ========================== -->
+    <section id="career" class="portfolio-section">
 
-        <p>
-            Outside of school, I enjoy...
-        </p>
+        <div class="section-container">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">
+                    03 — CAREER
+                </p>
+
+                <h2>
+                    Professional Engineering Experience
+                </h2>
+
+                <p>
+                    Professional experience in aerospace engineering,
+                    propulsion systems, aircraft design, and project
+                    engineering.
+                </p>
+
+            </div>
+
+
+            <div class="career-list">
+
+
+                <!-- P&W HYBRID -->
+
+                <article class="career-item">
+
+                    <div class="career-image">
+
+                        <img
+                            src="images/Hybrid Engine.jpg"
+                            alt="Hybrid electric propulsion engine"
+                        >
+
+                    </div>
+
+                    <div class="career-content">
+
+                        <p class="project-category">
+                            PRATT &amp; WHITNEY CANADA
+                        </p>
+
+                        <h3>
+                            Hybrid Electric Propulsion Project
+                        </h3>
+
+                        <p class="career-role">
+                            Project Lead — Nacelle-Mounted Heat Exchangers
+                        </p>
+
+                        <p>
+                            Worked on the Hybrid Electric Propulsion
+                            project with responsibility for the
+                            nacelle-mounted heat exchangers.
+                        </p>
+
+                        <ul>
+                            <li>
+                                Led design changes for nacelle-mounted
+                                heat exchangers.
+                            </li>
+
+                            <li>
+                                Helped design cockpit modifications.
+                            </li>
+
+                            <li>
+                                Simulated the engine and systems within
+                                the nacelle using CATIA.
+                            </li>
+
+                            <li>
+                                Worked with flight instrumentation,
+                                including instrumentation placement and
+                                detection logic.
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </article>
+
+
+                <!-- P&W PT6A -->
+
+                <article class="career-item">
+
+                    <div class="career-image">
+
+                        <img
+                            src="images/PT6.jpg"
+                            alt="Pratt & Whitney PT6A engine"
+                        >
+
+                    </div>
+
+                    <div class="career-content">
+
+                        <p class="project-category">
+                            PRATT &amp; WHITNEY CANADA
+                        </p>
+
+                        <h3>
+                            PT6A Project Engineering
+                        </h3>
+
+                        <p>
+                            Worked with the PT6A project engineering team,
+                            focusing on customer issues and engineering
+                            support.
+                        </p>
+
+                        <ul>
+                            <li>
+                                Investigated and supported customer issues.
+                            </li>
+
+                            <li>
+                                Worked with project engineering teams to
+                                address technical concerns.
+                            </li>
+
+                            <li>
+                                Applied engineering problem-solving to
+                                aircraft engine issues.
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </article>
+
+
+                <!-- DE HAVILLAND PART MANAGEMENT -->
+
+                <article class="career-item">
+
+                    <div class="career-image">
+
+                        <img
+                            src="images/DASH8.jpg"
+                            alt="De Havilland Dash 8 aircraft"
+                        >
+
+                    </div>
+
+                    <div class="career-content">
+
+                        <p class="project-category">
+                            DE HAVILLAND AIRCRAFT OF CANADA
+                        </p>
+
+                        <h3>
+                            Legacy Part Management
+                        </h3>
+
+                        <p>
+                            Worked with legacy aircraft components and
+                            engineering data as part of De Havilland
+                            Aircraft of Canada's engineering organization.
+                        </p>
+
+                        <ul>
+                            <li>
+                                Supported legacy aircraft part management.
+                            </li>
+
+                            <li>
+                                Worked with existing engineering information
+                                and aircraft components.
+                            </li>
+
+                            <li>
+                                Contributed to maintaining engineering
+                                support for legacy aircraft.
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </article>
+
+
+                <!-- DE HAVILLAND PART DESIGN -->
+
+                <article class="career-item">
+
+                    <div class="career-image">
+
+                        <img
+                            src="images/Plane.jpg"
+                            alt="Aircraft engineering"
+                        >
+
+                    </div>
+
+                    <div class="career-content">
+
+                        <p class="project-category">
+                            DE HAVILLAND AIRCRAFT OF CANADA
+                        </p>
+
+                        <h3>
+                            Legacy Part Design
+                        </h3>
+
+                        <p>
+                            Worked on the design and engineering support
+                            of components for legacy aircraft.
+                        </p>
+
+                        <ul>
+                            <li>
+                                Supported legacy aircraft part design.
+                            </li>
+
+                            <li>
+                                Applied mechanical engineering principles
+                                to aircraft components.
+                            </li>
+
+                            <li>
+                                Worked within established aerospace
+                                engineering processes.
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
     </section>
 
 
-    <!-- Strengths and Areas for Improvement -->
-    <section id="growth">
-        <h2>Strengths & Areas for Improvement</h2>
+    <!-- =========================
+         PERSONAL INTERESTS
+    ========================== -->
+    <section id="about" class="interests-section">
 
-        <h3>My Strengths</h3>
-        <p>
-            Describe your key strengths and provide examples.
-        </p>
+        <div class="section-container">
 
-        <h3>Areas for Improvement</h3>
-        <p>
-            Describe skills or areas you are currently working to improve.
-        </p>
+            <div class="section-heading">
+
+                <p class="eyebrow">
+                    04 — BEYOND ENGINEERING
+                </p>
+
+                <h2>
+                    Personal Interests
+                </h2>
+
+                <p>
+                    Outside of engineering and school, I enjoy staying
+                    active, exploring new places, and pursuing interests
+                    that take me away from the classroom.
+                </p>
+
+            </div>
+
+
+            <div class="interest-grid">
+
+
+                <div class="interest-card">
+
+                    <img
+                        src="images/Mountain.JPG"
+                        alt="Mountain landscape"
+                    >
+
+                    <div>
+                        <h3>
+                            Outdoors
+                        </h3>
+
+                        <p>
+                            Exploring the outdoors and spending time
+                            in nature.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="interest-card">
+
+                    <img
+                        src="images/Skiing.jpg"
+                        alt="Skiing"
+                    >
+
+                    <div>
+                        <h3>
+                            Skiing
+                        </h3>
+
+                        <p>
+                            Enjoying time outdoors through skiing and
+                            winter activities.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="interest-card">
+
+                    <img
+                        src="images/Snowshoe.jpg"
+                        alt="Snowshoeing"
+                    >
+
+                    <div>
+                        <h3>
+                            Snowshoeing
+                        </h3>
+
+                        <p>
+                            Exploring trails and spending time outside
+                            during the winter.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="interest-card">
+
+                    <img
+                        src="images/Rugby.jpg"
+                        alt="Rugby"
+                    >
+
+                    <div>
+                        <h3>
+                            Rugby
+                        </h3>
+
+                        <p>
+                            Staying active and building teamwork through
+                            sport.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="interest-card">
+
+                    <img
+                        src="images/CERN.jpg"
+                        alt="CERN"
+                    >
+
+                    <div>
+                        <h3>
+                            Exploring Engineering &amp; Science
+                        </h3>
+
+                        <p>
+                            An interest in engineering, science, technology,
+                            and exploring major research facilities.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="interest-card">
+
+                    <img
+                        src="images/Flying.jpg"
+                        alt="Flying"
+                    >
+
+                    <div>
+                        <h3>
+                            Aviation
+                        </h3>
+
+                        <p>
+                            A personal interest in aviation that connects
+                            closely with my passion for aerospace engineering.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
     </section>
 
 
-    <!-- What I Bring to a Team -->
-    <section id="team">
-        <h2>What I Can Contribute to a Team</h2>
+    <!-- =========================
+         SKILLS
+    ========================== -->
+    <section id="skills" class="skills-section">
 
-        <p>
-            Explain what you bring to a team, such as communication,
-            creativity, technical knowledge, leadership, reliability,
-            or problem-solving.
-        </p>
+        <div class="section-container">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">
+                    05 — SKILLS
+                </p>
+
+                <h2>
+                    Skills &amp; Capabilities
+                </h2>
+
+                <p>
+                    A combination of technical engineering skills and
+                    professional skills developed through university,
+                    design teams, and industry experience.
+                </p>
+
+            </div>
+
+
+            <div class="skills-grid">
+
+
+                <div class="skills-card">
+
+                    <h3>
+                        Technical Skills
+                    </h3>
+
+                    <ul>
+                        <li>Mechanical Design</li>
+                        <li>CAD Modelling</li>
+                        <li>CATIA</li>
+                        <li>CFD</li>
+                        <li>Engineering Analysis</li>
+                        <li>Composite Manufacturing</li>
+                        <li>Carbon Fiber Layups</li>
+                        <li>Systems Engineering</li>
+                        <li>Aircraft Design</li>
+                        <li>Engineering Simulation</li>
+                    </ul>
+
+                </div>
+
+
+                <div class="skills-card">
+
+                    <h3>
+                        Professional Skills
+                    </h3>
+
+                    <ul>
+                        <li>Project Leadership</li>
+                        <li>Teamwork</li>
+                        <li>Technical Communication</li>
+                        <li>Problem Solving</li>
+                        <li>Design Thinking</li>
+                        <li>Collaboration</li>
+                        <li>Project Management</li>
+                        <li>Technical Documentation</li>
+                        <li>Customer-Focused Engineering</li>
+                        <li>Multidisciplinary Collaboration</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
     </section>
 
 
-    <!-- Career Goals -->
-    <section id="goals">
-        <h2>Future Career Goals</h2>
+    <!-- =========================
+         STRENGTHS
+    ========================== -->
+    <section class="strengths-section">
 
-        <p>
-            Describe your short-term and long-term career goals.
-        </p>
+        <div class="section-container">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">
+                    06 — PROFESSIONAL DEVELOPMENT
+                </p>
+
+                <h2>
+                    Strengths &amp; Areas for Improvement
+                </h2>
+
+            </div>
+
+
+            <div class="strength-grid">
+
+                <div class="strength-card">
+
+                    <h3>
+                        Strengths
+                    </h3>
+
+                    <p>
+                        I bring a hands-on approach to engineering and enjoy
+                        taking ownership of technical problems. My experience
+                        across design teams and industry has strengthened my
+                        ability to work collaboratively while contributing
+                        to complex engineering projects.
+                    </p>
+
+                </div>
+
+
+                <div class="strength-card">
+
+                    <h3>
+                        Areas for Improvement
+                    </h3>
+
+                    <p>
+                        I am continually working to broaden my technical
+                        knowledge and become more effective at communicating
+                        complex engineering concepts. I also aim to continue
+                        developing my leadership and project management
+                        abilities through increasingly challenging projects.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
     </section>
 
 
-    <!-- Contact -->
-    <section id="contact">
-        <h2>Contact Me</h2>
+    <!-- =========================
+         WHAT I BRING
+    ========================== -->
+    <section class="team-contribution dark-section">
 
-        <p>
-            I'd love to connect!
-        </p>
+        <div class="section-container">
 
-        <a href="mailto:youremail@example.com">
-            Email Me
-        </a>
+            <div class="section-heading">
+
+                <p class="eyebrow">
+                    07 — TEAM CONTRIBUTION
+                </p>
+
+                <h2>
+                    What I Bring to a Team
+                </h2>
+
+                <p>
+                    I bring a combination of technical engineering knowledge,
+                    hands-on design experience, and a willingness to take
+                    ownership of challenging problems.
+                </p>
+
+            </div>
+
+
+            <div class="contribution-grid">
+
+                <div>
+                    <span>01</span>
+                    <h3>Technical Thinking</h3>
+                    <p>
+                        Applying engineering fundamentals to understand
+                        problems and develop practical solutions.
+                    </p>
+                </div>
+
+                <div>
+                    <span>02</span>
+                    <h3>Collaboration</h3>
+                    <p>
+                        Working effectively with multidisciplinary teams
+                        and communicating technical ideas.
+                    </p>
+                </div>
+
+                <div>
+                    <span>03</span>
+                    <h3>Ownership</h3>
+                    <p>
+                        Taking responsibility for projects and following
+                        engineering tasks from concept through development.
+                    </p>
+                </div>
+
+                <div>
+                    <span>04</span>
+                    <h3>Hands-On Experience</h3>
+                    <p>
+                        Combining CAD, analysis, manufacturing, and
+                        engineering theory with practical experience.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
     </section>
 
 
-    <!-- Footer -->
+    <!-- =========================
+         CAREER GOALS
+    ========================== -->
+    <section id="goals" class="goals-section">
+
+        <div class="section-container">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">
+                    08 — FUTURE
+                </p>
+
+                <h2>
+                    Future Career Goals
+                </h2>
+
+                <p>
+                    My goal is to continue developing as a mechanical
+                    engineer while building a career in aerospace and
+                    advanced engineering design.
+                </p>
+
+            </div>
+
+
+            <div class="goal-content">
+
+                <p>
+                    I am interested in pursuing opportunities where I can
+                    contribute to the design and development of aerospace
+                    systems while continuing to expand my technical and
+                    leadership abilities.
+                </p>
+
+                <p>
+                    In the future, I hope to take on increasingly complex
+                    engineering projects, work within multidisciplinary
+                    teams, and contribute to innovative aircraft and
+                    propulsion technologies.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+    <section id="contact" class="contact-section dark-section">
+
+        <div class="section-container">
+
+            <p class="eyebrow">
+                09 — CONTACT
+            </p>
+
+            <h2>
+                Let's Connect
+            </h2>
+
+            <p>
+                Whether you'd like to discuss engineering, aerospace,
+                design, or potential opportunities, I'd be happy to
+                connect.
+            </p>
+
+
+            <div class="contact-links">
+
+                <!-- Replace the email address below -->
+
+                <a
+                    href="mailto:YOUR-EMAIL@example.com"
+                    class="button primary-button"
+                >
+                    Email Me
+                </a>
+
+
+                <!-- Replace the LinkedIn URL below -->
+
+                <a
+                    href="https://www.linkedin.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button secondary-button"
+                >
+                    LinkedIn
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
     <footer>
-        <p>&copy; 2026 Your Name. All rights reserved.</p>
+
+        <div class="section-container">
+
+            <p>
+                © 2026 Ryan McGillivray
+            </p>
+
+            <p>
+                Mechanical Engineering — Queen's University
+            </p>
+
+        </div>
+
     </footer>
+
 
 </body>
 </html>
