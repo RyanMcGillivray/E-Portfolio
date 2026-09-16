@@ -286,8 +286,8 @@
                 <div class="feature-image">
 
                     <img
-                        src="images/QADT Drone.jpg"
-                        alt="Queen's Aerospace Design Team fixed-wing drone"
+                        src="images/QADTBanner2.png"
+                        alt="Queen's Aerospace Design Team fixed-wing drone at a test field"
                     >
 
                 </div>
@@ -630,17 +630,12 @@
                 <article class="large-card">
 
                     <img
-                        src="images/Front Wing.jpg"
-                        alt="Formula SAE front wing"
+                        src="images/FSAE2.png"
+                        alt="Formula SAE race car"
                     >
 
 
                     <div class="large-card-content">
-
-                        <p class="project-category">
-                            FORMULA SAE
-                        </p>
-
 
                         <h3>
                             Formula SAE Car
@@ -657,7 +652,13 @@
                         </p>
 
 
-                        <ul>
+                        <div class="team-gallery">
+
+                            <input class="expand-toggle team-toggle" id="fsae-toggle" type="checkbox">
+
+                            <div class="expandable-content team-gallery-content team-gallery-preview">
+
+                                <ul>
 
                             <li>
                                 Helped design components of the
@@ -673,7 +674,25 @@
                                 composite manufacturing.
                             </li>
 
-                        </ul>
+                                </ul>
+
+                            <div class="team-gallery-images single-image">
+
+                                <img
+                                    src="images/CarbonFiber.jpg"
+                                    alt="Carbon fiber manufacturing"
+                                >
+
+                            </div>
+
+                            </div>
+
+                            <label class="expand-toggle-label" for="fsae-toggle">
+                                <span class="expand-label">Read More <span aria-hidden="true">↓</span></span>
+                                <span class="collapse-label">Show less <span aria-hidden="true">↑</span></span>
+                            </label>
+
+                        </div>
 
 
                     </div>
@@ -689,20 +708,15 @@
                 <article class="large-card">
 
                     <img
-                        src="images/QADT Drone.jpg"
-                        alt="Queen's Aerospace Design Team fixed-wing drone"
+                        src="images/QADTBanner2.png"
+                        alt="Queen's Aerospace Design Team fixed-wing drone at a test field"
                     >
 
 
                     <div class="large-card-content">
 
-                        <p class="project-category">
-                            QUEEN'S AEROSPACE DESIGN TEAM
-                        </p>
-
-
                         <h3>
-                            Aerospace Design &amp; Optimization
+                            Queen's Aerospace Design Team
                         </h3>
 
 
@@ -716,7 +730,13 @@
                         </p>
 
 
-                        <ul>
+                        <div class="team-gallery">
+
+                            <input class="expand-toggle team-toggle" id="qadt-toggle" type="checkbox">
+
+                            <div class="expandable-content team-gallery-content team-gallery-preview">
+
+                                <ul>
 
                             <li>
                                 Helped create an aerostructure
@@ -737,7 +757,30 @@
                                 identifying forest fire hotspots.
                             </li>
 
-                        </ul>
+                                </ul>
+
+                            <div class="team-gallery-images">
+
+                                <img
+                                    src="images/QADT Layout.jpg"
+                                    alt="Queen's Aerospace Design Team layout"
+                                >
+
+                                <img
+                                    src="images/QADT Opt.jpg"
+                                    alt="Aerospace structural optimization"
+                                >
+
+                            </div>
+
+                            </div>
+
+                            <label class="expand-toggle-label" for="qadt-toggle">
+                                <span class="expand-label">View Queen's Aerospace Design Team project details <span aria-hidden="true">↓</span></span>
+                                <span class="collapse-label">Show less <span aria-hidden="true">↑</span></span>
+                            </label>
+
+                        </div>
 
 
                     </div>
@@ -746,34 +789,6 @@
 
 
             </div>
-
-
-
-            <!-- DESIGN TEAM SUPPORTING IMAGES -->
-
-            <div class="image-gallery">
-
-
-                <img
-                    src="images/CarbonFiber.jpg"
-                    alt="Carbon fiber manufacturing"
-                >
-
-
-                <img
-                    src="images/QADT Layout.jpg"
-                    alt="Queen's Aerospace Design Team layout"
-                >
-
-
-                <img
-                    src="images/QADT Opt.jpg"
-                    alt="Aerospace structural optimization"
-                >
-
-
-            </div>
-
 
         </div>
 
@@ -1042,8 +1057,8 @@
                     <div class="career-image">
 
                         <img
-                            src="images/DASH8.jpg"
-                            alt="De Havilland aircraft"
+                            src="images/waterbomber.jpg"
+                            alt="De Havilland waterbomber aircraft"
                         >
 
                     </div>
@@ -1114,8 +1129,7 @@
     ====================================================== -->
 
     <section
-        id="about"
-        class="interests-section"
+        class="interests-section legacy-interests"
     >
 
         <div class="section-container">
@@ -1739,12 +1753,287 @@
 
 
     <!-- =====================================================
+         ABOUT ME
+    ====================================================== -->
+
+    <section id="about" class="about-section">
+
+        <div class="section-container">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">
+                    ABOUT ME
+                </p>
+
+                <h2>
+                    Beyond Engineering
+                </h2>
+
+                <p>
+                    A little more about my interests, career goals,
+                    achievements, and education.
+                </p>
+
+            </div>
+
+
+            <div class="about-subsection">
+
+                <div class="about-subsection-heading">
+
+                    <p class="eyebrow">
+                        PERSONAL INTERESTS
+                    </p>
+
+                    <h3>
+                        Personal Interests
+                    </h3>
+
+                </div>
+
+                <p class="about-subsection-introduction">
+                    Outside of engineering and school, I enjoy staying active, exploring new places, and pursuing interests that take me away from the classroom.
+                </p>
+
+                <input class="expand-toggle" id="interests-toggle" type="checkbox">
+
+                <div class="expandable-content expandable-interests">
+
+                    <div class="interest-grid">
+
+                    <div class="interest-card">
+                        <img src="images/Mountain.JPG" alt="Mountain landscape">
+                        <div>
+                            <h3>Outdoors</h3>
+                            <p>Exploring the outdoors and spending time in nature.</p>
+                        </div>
+                    </div>
+
+                    <div class="interest-card">
+                        <img src="images/Skiing.jpg" alt="Skiing">
+                        <div>
+                            <h3>Skiing</h3>
+                            <p>Enjoying time outdoors through skiing and winter activities.</p>
+                        </div>
+                    </div>
+
+                    <div class="interest-card">
+                        <img src="images/Snowshoe.jpg" alt="Snowshoeing">
+                        <div>
+                            <h3>Snowshoeing</h3>
+                            <p>Exploring trails and spending time outside during the winter.</p>
+                        </div>
+                    </div>
+
+                    <div class="interest-card">
+                        <img src="images/Rugby.jpg" alt="Rugby">
+                        <div>
+                            <h3>Rugby</h3>
+                            <p>Staying active and building teamwork through sport.</p>
+                        </div>
+                    </div>
+
+                    <div class="interest-card">
+                        <img src="images/CERN.jpg" alt="CERN">
+                        <div>
+                            <h3>Engineering &amp; Science</h3>
+                            <p>An interest in engineering, science, technology, and exploring major research facilities.</p>
+                        </div>
+                    </div>
+
+                    <div class="interest-card">
+                        <img src="images/Plane.jpg" alt="Aircraft and aviation">
+                        <div>
+                            <h3>Aviation</h3>
+                            <p>A personal interest in aviation that connects closely with my passion for aerospace engineering.</p>
+                        </div>
+                    </div>
+
+                    </div>
+
+                </div>
+
+                <label class="expand-toggle-label" for="interests-toggle">
+                    <span class="expand-label">View all interests <span aria-hidden="true">↓</span></span>
+                    <span class="collapse-label">Show less <span aria-hidden="true">↑</span></span>
+                </label>
+
+            </div>
+
+
+            <div class="about-subsection">
+
+                <div class="about-subsection-heading">
+
+                    <p class="eyebrow">
+                        FUTURE
+                    </p>
+
+                    <h3>
+                        Future Career Goals
+                    </h3>
+
+                </div>
+
+                <div class="about-text-block">
+
+                    <p>
+                        My goal is to continue developing as a mechanical engineer while building a career in aerospace and advanced engineering design.
+                    </p>
+
+                    <p>
+                        I am interested in opportunities where I can contribute to the design and development of aerospace systems while continuing to expand my technical and leadership abilities.
+                    </p>
+
+                    <p>
+                        In the future, I hope to take on increasingly complex engineering projects, work within multidisciplinary teams, and contribute to innovative aircraft and propulsion technologies.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="about-subsection">
+
+                <div class="about-subsection-heading">
+
+                    <p class="eyebrow">
+                        ACHIEVEMENTS
+                    </p>
+
+                    <h3>
+                        Awards &amp; Scholarships
+                    </h3>
+
+                </div>
+
+                <input class="expand-toggle" id="achievements-toggle" type="checkbox">
+
+                <div class="expandable-content expandable-achievements">
+
+                    <div class="achievement-list">
+
+                    <article class="achievement-card">
+                        <div class="achievement-year">2025</div>
+                        <div class="achievement-content">
+                            <h4>Carolyn F. Small Memorial Award for Design Innovation</h4>
+                            <p class="achievement-meta">Issued by Queen's University <span>·</span> Sep 2025</p>
+                            <p class="achievement-association">Associated with Queen's University</p>
+                        </div>
+                    </article>
+
+                    <article class="achievement-card">
+                        <div class="achievement-year">2025</div>
+                        <div class="achievement-content">
+                            <h4>Lorne C Elder Scholarship in Mechanical &amp; Materials Engineering</h4>
+                            <p class="achievement-meta">Issued by Queen's University <span>·</span> Sep 2025</p>
+                            <p class="achievement-association">Associated with Queen's University</p>
+                        </div>
+                    </article>
+
+                    <article class="achievement-card">
+                        <div class="achievement-year">2025</div>
+                        <div class="achievement-content">
+                            <h4>Ontario Professional Engineers Foundation for Education Scholarships</h4>
+                            <p class="achievement-meta">Issued by Queen's University <span>·</span> Sep 2025</p>
+                            <p class="achievement-association">Associated with Queen's University</p>
+                        </div>
+                    </article>
+
+                    <article class="achievement-card">
+                        <div class="achievement-year">2024</div>
+                        <div class="achievement-content">
+                            <h4>Lorne C Elder Scholarship in Mechanical &amp; Materials Engineering</h4>
+                            <p class="achievement-meta">Issued by Queen's University <span>·</span> Sep 2024</p>
+                            <p class="achievement-association">Associated with Queen's University</p>
+                        </div>
+                    </article>
+
+                    <article class="achievement-card">
+                        <div class="achievement-year">2024</div>
+                        <div class="achievement-content">
+                            <h4>Orica Canada Ltd. Scholarship</h4>
+                            <p class="achievement-meta">Issued by Queen's University <span>·</span> Sep 2024</p>
+                            <p class="achievement-association">Associated with Queen's University</p>
+                        </div>
+                    </article>
+
+                    <article class="achievement-card">
+                        <div class="achievement-year">2022</div>
+                        <div class="achievement-content">
+                            <h4>Alexander Rutherford Scholarship</h4>
+                            <p class="achievement-meta">Issued by Government of Alberta <span>·</span> Sep 2022</p>
+                        </div>
+                    </article>
+
+                    <article class="achievement-card">
+                        <div class="achievement-year">2022</div>
+                        <div class="achievement-content">
+                            <h4>Connor Rhys Simpson Memorial Award</h4>
+                            <p class="achievement-meta">Issued by Calgary Foundation Scholarship <span>·</span> Sep 2022</p>
+                        </div>
+                    </article>
+
+                    <article class="achievement-card">
+                        <div class="achievement-year">2022</div>
+                        <div class="achievement-content">
+                            <h4>Queen's University Excellence Scholarship</h4>
+                            <p class="achievement-meta">Issued by Queen's University <span>·</span> Sep 2022</p>
+                            <p class="achievement-association">Associated with Queen's University</p>
+                        </div>
+                    </article>
+
+                    </div>
+
+                </div>
+
+                <label class="expand-toggle-label" for="achievements-toggle">
+                    <span class="expand-label">View all awards &amp; scholarships <span aria-hidden="true">↓</span></span>
+                    <span class="collapse-label">Show less <span aria-hidden="true">↑</span></span>
+                </label>
+
+            </div>
+
+
+            <div class="about-subsection">
+
+                <div class="about-subsection-heading">
+
+                    <p class="eyebrow">
+                        EDUCATION
+                    </p>
+
+                    <h3>
+                        Education
+                    </h3>
+
+                </div>
+
+                <div class="education-card">
+                    <div class="education-content">
+                        <p class="education-date">2022 — 2026</p>
+                        <h4>Bachelor of Applied Science — Mechanical Engineering</h4>
+                        <p class="education-school">Queen's University</p>
+                        <p>Smith Engineering</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
          CAREER GOALS
     ====================================================== -->
 
     <section
         id="goals"
-        class="goals-section"
+        class="goals-section legacy-goals"
     >
 
         <div class="section-container">
@@ -1832,8 +2121,8 @@
             <p>
 
                 Whether you'd like to discuss engineering,
-                aerospace, design, or potential opportunities,
-                I'd be happy to connect.
+                aerospace, or potential opportunities, I'd be
+                happy to connect.
 
             </p>
 
