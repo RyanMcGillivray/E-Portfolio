@@ -363,17 +363,6 @@ ul {
 }
 
 
-.hero-description {
-    color: var(--cyan);
-
-    font-size: 1.1rem;
-
-    font-weight: 600;
-
-    margin-bottom: 20px;
-}
-
-
 .hero-introduction {
     max-width: 650px;
 
