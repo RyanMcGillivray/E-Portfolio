@@ -232,8 +232,8 @@ ul {
     background:
         linear-gradient(
             120deg,
-            rgba(11, 23, 42, 0.90),
-            rgba(19, 36, 61, 0.87)
+            rgba(11, 23, 42, 0.84),
+            rgba(19, 36, 61, 0.81)
         ),
         url("images/Wallpaper.JPG") center / cover;
 
