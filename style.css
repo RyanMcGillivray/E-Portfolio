@@ -232,9 +232,10 @@ ul {
     background:
         linear-gradient(
             120deg,
-            rgba(11, 23, 42, 0.98),
-            rgba(19, 36, 61, 0.95)
-        );
+            rgba(11, 23, 42, 0.90),
+            rgba(19, 36, 61, 0.87)
+        ),
+        url("images/Wallpaper.JPG") center / cover;
 
     color: var(--white);
 
@@ -695,7 +696,7 @@ ul {
     display: grid;
 
     grid-template-columns:
-        repeat(3, 1fr);
+        repeat(4, 1fr);
 
     gap: 25px;
 }
