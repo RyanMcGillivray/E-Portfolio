@@ -4,6 +4,18 @@ if (lightbox) {
     const lightboxImage = lightbox.querySelector(".image-lightbox-image");
     const lightboxCaption = lightbox.querySelector(".image-lightbox-caption");
     const lightboxClose = lightbox.querySelector(".image-lightbox-close");
+    const minorTitleWords = new Set(["a", "an", "and", "as", "at", "but", "by", "for", "from", "in", "into", "nor", "of", "on", "or", "per", "the", "to", "via", "with"]);
+    const formatImageTitle = (title) => {
+        const words = title.split(" ");
+
+        return words.map((word, index) => {
+            if (index > 0 && index < words.length - 1 && minorTitleWords.has(word.toLowerCase())) {
+                return word.toLowerCase();
+            }
+
+            return word.replace(/(^|[-])([a-z])/g, (match, prefix, letter) => `${prefix}${letter.toUpperCase()}`);
+        }).join(" ");
+    };
 
     const closeLightbox = () => {
         lightbox.classList.remove("is-open");
@@ -24,7 +36,7 @@ if (lightbox) {
 
             lightboxImage.src = image.currentSrc || image.src;
             lightboxImage.alt = image.alt;
-            lightboxCaption.textContent = image.alt;
+            lightboxCaption.textContent = formatImageTitle(image.alt);
 
             lightbox.classList.add("is-open");
             lightbox.setAttribute("aria-hidden", "false");
