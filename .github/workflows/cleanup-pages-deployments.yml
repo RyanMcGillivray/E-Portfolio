@@ -1,0 +1,73 @@
+name: Clean Up Inactive Pages Deployments
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  deployments: write
+
+concurrency:
+  group: pages-deployment-cleanup
+  cancel-in-progress: false
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Delete inactive GitHub Pages deployments
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const { owner, repo } = context.repo;
+            const deployments = await github.paginate(
+              github.rest.repos.listDeployments,
+              {
+                owner,
+                repo,
+                environment: "github-pages",
+                per_page: 100,
+              },
+            );
+
+            const oldestDeployments = deployments
+              .sort((first, second) => new Date(second.created_at) - new Date(first.created_at))
+              .slice(1);
+
+            let deleted = 0;
+            for (const deployment of oldestDeployments) {
+              const statuses = await github.paginate(
+                github.rest.repos.listDeploymentStatuses,
+                {
+                  owner,
+                  repo,
+                  deployment_id: deployment.id,
+                  per_page: 100,
+                },
+              );
+
+              const latestStatus = statuses.sort(
+                (first, second) => new Date(second.created_at) - new Date(first.created_at),
+              )[0];
+
+              if (latestStatus?.state !== "inactive") {
+                core.info(`Keeping deployment ${deployment.id}: it is not inactive.`);
+                continue;
+              }
+
+              await github.rest.repos.deleteDeployment({
+                owner,
+                repo,
+                deployment_id: deployment.id,
+              });
+              deleted += 1;
+              core.info(`Deleted inactive deployment ${deployment.id}.`);
+            }
+
+            core.info(`Deleted ${deleted} inactive Pages deployment(s).`);
