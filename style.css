@@ -507,7 +507,7 @@ ul {
 .intro {
     background-color: var(--white);
 
-    padding: 65px 0;
+    padding: 50px 0;
 }
 
 
@@ -546,7 +546,7 @@ ul {
 .strengths-section,
 .interests-section,
 .goals-section {
-    padding: 110px 0;
+    padding: 85px 0;
 }
 
 
@@ -556,7 +556,7 @@ ul {
 
 
 .home-preview-section {
-    padding: 85px 0;
+    padding: 70px 0;
 
     background-color: var(--off-white);
 }
@@ -830,7 +830,7 @@ ul {
 .section-heading {
     max-width: 750px;
 
-    margin-bottom: 55px;
+    margin-bottom: 40px;
 }
 
 
@@ -1642,7 +1642,7 @@ ul {
 ========================================================= */
 
 .team-contribution {
-    padding: 110px 0;
+    padding: 85px 0;
 }
 
 
@@ -1716,12 +1716,12 @@ ul {
 .about-section {
     background-color: var(--off-white);
 
-    padding: 110px 0;
+    padding: 85px 0;
 }
 
 
 .about-subsection {
-    margin-top: 85px;
+    margin-top: 65px;
 }
 
 
@@ -2078,7 +2078,7 @@ ul {
 ========================================================= */
 
 .contact-section {
-    padding: 120px 0;
+    padding: 90px 0;
 
     text-align: center;
 }
