@@ -1,9 +1,7 @@
-name: Clean Up Inactive Pages Deployments
+name: Clean Up Superseded Pages Deployments
 
 on:
-  push:
-    branches:
-      - main
+  deployment_status:
   schedule:
     - cron: "17 3 * * *"
   workflow_dispatch:
@@ -20,12 +18,24 @@ jobs:
   cleanup:
     runs-on: ubuntu-latest
     steps:
-      - name: Delete inactive GitHub Pages deployments
+      - name: Delete superseded GitHub Pages deployments
         uses: actions/github-script@v7
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const { owner, repo } = context.repo;
+
+            if (
+              context.eventName === "deployment_status" &&
+              (
+                context.payload.deployment.environment !== "github-pages" ||
+                context.payload.deployment_status.state !== "success"
+              )
+            ) {
+              core.info("Ignoring a deployment event that is not a successful GitHub Pages deployment.");
+              return;
+            }
+
             const deployments = await github.paginate(
               github.rest.repos.listDeployments,
               {
@@ -36,30 +46,46 @@ jobs:
               },
             );
 
-            const oldestDeployments = deployments
-              .sort((first, second) => new Date(second.created_at) - new Date(first.created_at))
-              .slice(1);
+            deployments.sort(
+              (first, second) => new Date(second.created_at) - new Date(first.created_at),
+            );
+
+            if (deployments.length < 2) {
+              core.info("Only one GitHub Pages deployment exists; there is nothing to clean up.");
+              return;
+            }
+
+            const newestDeployment = deployments[0];
+            const newestStatuses = await github.paginate(
+              github.rest.repos.listDeploymentStatuses,
+              {
+                owner,
+                repo,
+                deployment_id: newestDeployment.id,
+                per_page: 100,
+              },
+            );
+            const newestStatus = newestStatuses.sort(
+              (first, second) => new Date(second.created_at) - new Date(first.created_at),
+            )[0];
+
+            if (newestStatus?.state !== "success") {
+              core.info("The newest GitHub Pages deployment is not successful yet; cleanup will retry later.");
+              return;
+            }
+
+            const oldDeployments = deployments.slice(1);
 
             let deleted = 0;
-            for (const deployment of oldestDeployments) {
-              const statuses = await github.paginate(
-                github.rest.repos.listDeploymentStatuses,
-                {
-                  owner,
-                  repo,
-                  deployment_id: deployment.id,
-                  per_page: 100,
-                },
-              );
-
-              const latestStatus = statuses.sort(
-                (first, second) => new Date(second.created_at) - new Date(first.created_at),
-              )[0];
-
-              if (latestStatus?.state !== "inactive") {
-                core.info(`Keeping deployment ${deployment.id}: it is not inactive.`);
-                continue;
-              }
+            for (const deployment of oldDeployments) {
+              await github.rest.repos.createDeploymentStatus({
+                owner,
+                repo,
+                deployment_id: deployment.id,
+                state: "inactive",
+                auto_inactive: false,
+                description: "Superseded by a newer successful GitHub Pages deployment.",
+              });
 
               await github.rest.repos.deleteDeployment({
                 owner,
@@ -67,7 +93,7 @@ jobs:
                 deployment_id: deployment.id,
               });
               deleted += 1;
-              core.info(`Deleted inactive deployment ${deployment.id}.`);
+              core.info(`Deleted superseded deployment ${deployment.id}.`);
             }
 
-            core.info(`Deleted ${deleted} inactive Pages deployment(s).`);
+            core.info(`Deleted ${deleted} superseded Pages deployment(s).`);
